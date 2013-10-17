@@ -1,0 +1,33 @@
+$navbarBackground: white;
+
+@import 'bootstrap';
+
+body {
+	padding-top: 60px;
+}
+
+@import 'bootstrap-responsive';
+
+.navbar-inner {
+	@include box-shadow(none !important);
+	border: 0;
+}
+
+h1 {
+	font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+}
+
+.footer {
+	margin-top: 50px;
+	color: $grayLight;
+}
+
+span {
+	color: #8FD8D8;
+}
+
+.disc-text {
+	font-family: "Oxygen";
+}
+
+
