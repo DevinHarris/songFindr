@@ -1,13 +1,16 @@
-<div class="hero-unit">
-	<h1>Welcome to songFind<span>r</span>!</h1>
-	<p class="disc text">
-	You've just discovered a new way to find your music.
-	</p>
-	<p>
-		<%= link_to "Start searching now!", "#", class: "btn btn-primary btn large" %>
-		or
-		<%= link_to "Sign Up!", "#", class: "btn btn-secondary btn large" %>
-	</p>
-</div>
-
+<% if user_signed_in? %>
+	<h1> You're logged in!... Now look for some music! </h1>
+<% else %>
+	<div class="hero-unit">
+		<h1>Welcome to songFind<span>r</span>!</h1>
+		<p>
+		You've just discovered a new way to find your music.
+		</p>
+		<p>
+			<%= link_to "Start searching now!", "#", class: "btn btn-primary btn large" %>
+			or
+			<%= link_to "Sign Up!", new_user_registration_path, class: "btn btn-secondary btn large" %>
+		</p>
+	</div>
+<% end %>
 
